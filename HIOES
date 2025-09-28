@@ -1,0 +1,48 @@
+
+---
+
+*1. users.php (Registo e Login simples)*
+
+```php
+<?php
+users = [];
+
+function register(name, phone,password) {
+  global users;users[phone] = ['name' =>name, 'password' => password, 'balance' => 0];
+  return "Conta criada com sucesso paraname.";
+}
+
+function login(phone,password) {
+  global users;
+  if (isset(users[phone])users[phone]['password'] ==password) {
+    return "Login bem-sucedido! Bem-vindo " . users[phone]['name'];
+  }
+  return "Telefone ou senha incorretos.";
+}
+?>
+```
+
+---
+
+*2. invest.php (Simulador de investimento)*
+
+```php
+<?php
+function simulateInvestment(amount,days) {
+  rate = 0.05; // 5final = amount * pow((1 +rate), days);
+  return "Investindoamount MT por days dias, retorno esperado: " . round(final, 2) . " MT";
+}
+?>
+```
+
+---
+
+*3. referral.php (Sistema de referência)*
+
+```php
+<?php
+referrals = [];
+
+function refer(referrerPhone, newUserPhone) 
+  globalreferrals;
+  referrals[referrerPhone][] = newUserPhone;
